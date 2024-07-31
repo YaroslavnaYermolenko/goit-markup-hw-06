@@ -26,6 +26,92 @@
   <body>
     <header class="header">
       <div class="container">
+        <div class="mobile-top-menu" data-menu>
+          <!---is open-->
+          <div class="top-part">
+            <button class="button-close" type="button" data-menu-close>
+              <svg class="button-close-icon" width="8" height="8">
+                <use href="./images/icons.svg#icon-close"></use>
+              </svg>
+            </button>
+            <nav class="header-navigation">
+              <ul class="top-menu-mob">
+                <li class="top-menu-item">
+                  <a href="./index.html" class="link active">Studio</a>
+                </li>
+                <li class="top-menu-item">
+                  <a href="" class="link">Portfolio</a>
+                </li>
+                <li class="top-menu-item">
+                  <a href="" class="link">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="bottom-part">
+            <address class="contacts-us-mob">
+              <ul class="contacts-us-menu">
+                <li class="top-menu-item">
+                  <a href="tel:+110001111111" class="link active"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="top-menu-item">
+                  <a href="mailto:info@devstudio.com" class="link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <ul class="social-links">
+              <li class="social-links-item">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  class="soc-link"
+                >
+                  <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links-item">
+                <a
+                  href="https://www.twitter.com/"
+                  target="_blank"
+                  class="soc-link"
+                >
+                  <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links-item">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  class="soc-link"
+                >
+                  <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-links-item">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  class="soc-link"
+                >
+                  <svg class="social-icon" width="16" height="16">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <nav class="header-navigation">
           <a href="./index.html" class="logo-header"
             >Web<span class="logo-hader-part">Studio</span></a
@@ -50,13 +136,20 @@
             </li>
           </ul>
         </address>
+        <button type="button" class="header-mobile-btn" data-menu-open>
+          <svg class="header-btn-icon" width="24" height="24">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
       <section class="orders">
         <div class="container">
           <h1 class="orders-header">Effective Solutions for Your Business</h1>
-          <button type="button" class="orders-button">Order Service</button>
+          <button type="button" class="orders-button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -121,6 +214,10 @@
           <ul class="team-list">
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team/img1.jpg   1x,
+                  ./images/team/img1x2.jpg 2x
+                "
                 src="./images/team/img1.jpg"
                 class="team-photo"
                 width="264"
@@ -179,6 +276,10 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team/img2.jpg   1x,
+                  ./images/team/img2x2.jpg 2x
+                "
                 src="./images/team/img2.jpg"
                 class="team-photo"
                 width="264"
@@ -237,6 +338,10 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team/img3.jpg   1x,
+                  ./images/team/img3x2.jpg 2x
+                "
                 src="./images/team/img3.jpg"
                 class="team-photo"
                 width="264"
@@ -295,6 +400,10 @@
             </li>
             <li class="team-item">
               <img
+                srcset="
+                  ./images/team/img4.jpg   1x,
+                  ./images/team/img4x2.jpg 2x
+                "
                 src="./images/team/img4.jpg"
                 class="team-photo"
                 width="264"
@@ -361,8 +470,12 @@
             <li class="portfolio-item">
               <div class="portfolio-item-overlay">
                 <img
+                  srcset="
+                    ./images/portfolio/img1row1.jpg   1x,
+                    ./images/portfolio/img1row1x2.jpg 2x
+                  "
                   class="portfolio-item-img"
-                  src="./images/portfolio/img1roww1.jpg"
+                  src="./images/portfolio/img1row1.jpg"
                   alt="App"
                   width="360"
                 />
@@ -380,6 +493,10 @@
             <li class="portfolio-item">
               <div class="portfolio-item-overlay">
                 <img
+                  srcset="
+                    ./images/portfolio/img2row1.jpg   1x,
+                    ./images/portfolio/img2row1x2.jpg 2x
+                  "
                   class="portfolio-item-img"
                   src="./images/portfolio/img2row1.jpg"
                   alt="marketing"
@@ -399,6 +516,10 @@
             <li class="portfolio-item">
               <div class="portfolio-item-overlay">
                 <img
+                  srcset="
+                    ./images/portfolio/img3row1.jpg   1x,
+                    ./images/portfolio/img3row1x2.jpg 2x
+                  "
                   class="portfolio-item-img"
                   src="./images/portfolio/img3row1.jpg"
                   alt="App"
@@ -418,6 +539,10 @@
             <li class="portfolio-item">
               <div class="portfolio-item-overlay">
                 <img
+                  srcset="
+                    ./images/portfolio/img1row2.jpg   1x,
+                    ./images/portfolio/img1row2x2.jpg 2x
+                  "
                   class="portfolio-item-img"
                   src="./images/portfolio/img1row2.jpg"
                   alt="Marketing"
@@ -437,6 +562,10 @@
             <li class="portfolio-item">
               <div class="portfolio-item-overlay">
                 <img
+                  srcset="
+                    ./images/portfolio/img2row2.jpg   1x,
+                    ./images/portfolio/img2row2x2.jpg 2x
+                  "
                   class="portfolio-item-img"
                   src="./images/portfolio/img2row2.jpg"
                   alt="design"
@@ -456,6 +585,10 @@
             <li class="portfolio-item">
               <div class="portfolio-item-overlay">
                 <img
+                  srcset="
+                    ./images/portfolio/img3row2.jpg   1x,
+                    ./images/portfolio/img3row2x2.jpg 2x
+                  "
                   class="portfolio-item-img"
                   src="./images/portfolio/img3row2.jpg"
                   alt="marketing"
@@ -557,9 +690,9 @@
         </div>
       </div>
     </footer>
-    <div class="modal-overlay">
+    <div class="modal-overlay" data-modal>
       <div class="modal">
-        <button class="button-close" type="button">
+        <button class="button-close" type="button" data-modal-close>
           <svg class="button-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
@@ -638,13 +771,15 @@
                   <use href="./images/icons.svg#icon-checked"></use>
                 </svg>
               </span>
-              I accept the terms and conditions of the&nbsp;
-              <a href="" class="pr-pl">Privacy Policy</a></label
+              <span>I accept the terms and conditions of the&nbsp;
+              <a href="" class="pr-pl">Privacy Policy</a></span></label
             >
           </div>
           <button type="submit" class="form-button">Send</button>
         </form>
       </div>
     </div>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

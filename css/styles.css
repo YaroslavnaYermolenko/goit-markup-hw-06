@@ -802,6 +802,9 @@ body .footer-desc {
     min-height: 584px;
     padding: 72px 24px 24px;
   }
+  .footer-soc-block-header {
+    text-align: left;
+  }
 }
 /*desctop*/
 @media screen and (min-width: 1158px) {
@@ -923,9 +926,7 @@ body .footer-desc {
   .soc-link-block {
     margin-right: 80px;
   }
-  .footer-soc-block-header {
-    text-align: left;
-  }
+  
   .footer-text-block {
     text-align: left;
   }

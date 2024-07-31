@@ -802,6 +802,7 @@ body .footer-desc {
     min-height: 584px;
     padding: 72px 24px 24px;
   }
+  .footer-text-block,
   .footer-soc-block-header {
     text-align: left;
   }
@@ -832,7 +833,7 @@ body .footer-desc {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    padding:24px 0;
+    padding: 24px 0;
   }
   .concept,
   .team,
@@ -873,7 +874,7 @@ body .footer-desc {
   .concept-item {
     width: calc((100% - 72px) / 4);
   }
-  
+
   .concept-icon-container {
     display: block;
     background-color: #f4f4fd;
@@ -926,7 +927,7 @@ body .footer-desc {
   .soc-link-block {
     margin-right: 80px;
   }
-  
+
   .footer-text-block {
     text-align: left;
   }

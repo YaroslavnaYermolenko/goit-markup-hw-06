@@ -79,6 +79,7 @@ button {
 .header-navigation {
   display: flex;
   align-items: center;
+  margin-bottom: auto;
 }
 .header-navigation .logo-header {
   margin-right: 76px;
@@ -105,13 +106,18 @@ button {
   pointer-events: none;
 }
 .top-menu-mob {
-  margin-top: 72px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
-.top-part,
-.bottom-part {
+.mobile-menu-container {
   width: 320px;
+  padding: 72px 16px 40px;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .mobile-top-menu .button-close {
   background-color: rgba(231, 233, 252, 0.1);
@@ -124,19 +130,25 @@ button {
 .logo-footer-part {
   color: #f4f4fd;
 }
+.contacts-us-mob .contacts-us-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
 .contacts-us-mob .link {
   font-size: 20px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: 0.02em;
   font-style: normal;
-  padding-bottom: 24px;
 }
 
-.bottom-part .social-links {
+.mobile-menu-container .social-links {
   justify-content: left;
-  margin-top: 24px;
-  margin-bottom: 40px;
+  align-self: normal;
+  margin-top: 0;
+  gap: 40px;
 }
 .link {
   font-size: 36px;
@@ -145,7 +157,7 @@ button {
   letter-spacing: 0.02em;
   position: relative;
   color: #2e2f42;
-  padding-bottom: 40px;
+  /*padding-bottom: 40px;*/
   display: flex;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -222,7 +234,7 @@ button {
 }
 .orders {
   background-color: #2e2f42;
-  background: linear-gradient(
+  background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -235,10 +247,11 @@ button {
   text-align: center;
   padding: 72px 0;
   margin: 0 auto;
+  max-width: 320px;
 }
 @media (min-resolution: 192dpi) {
   .orders {
-    background: linear-gradient(
+    background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -251,9 +264,9 @@ button {
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
-  max-width: 496px;
+  max-width: 216px;
   font-size: 36px;
-  margin: 72px auto;
+  margin: 0 auto 72px;
 }
 .orders-button {
   margin: auto;
@@ -326,7 +339,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 12px;
+  /*margin: 0 12px;*/
   gap: 72px;
 }
 .team-item {
@@ -511,7 +524,7 @@ body .footer-desc {
 }
 .subscribe-input {
   padding-left: 16px;
-  width: 264px;
+  width: 288px;
   height: 40px;
   border: 1px solid #fff;
   border-radius: 4px;
@@ -597,6 +610,7 @@ body .footer-desc {
   justify-content: center;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
+  flex-shrink: 0;
   margin-right: 8px;
   fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -700,7 +714,8 @@ body .footer-desc {
     padding: 0 16px;
   }
 
-  .header-mobile-btn {
+  .header-mobile-btn,
+  .mobile-top-menu {
     display: none;
   }
   .contacts-us {
@@ -717,6 +732,7 @@ body .footer-desc {
     letter-spacing: 0.02em;
     padding: 24px 0;
   }
+
   .top-menu .top-menu-item .link:hover::after,
   .active::after {
     content: "";
@@ -744,23 +760,30 @@ body .footer-desc {
     padding: 0;
   }
   .orders {
-    background: linear-gradient(
+    background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/hero/hero1x1440.jpg);
+      url(../images/hero/hero1x768.jpg);
+    max-width: 768px;
+    padding: 112px 0;
   }
   @media (min-resolution: 192dpi) {
     .orders {
-      background: linear-gradient(
+      background-image: linear-gradient(
           to bottom,
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
         ),
-        url(../images/hero/hero2x1440.jpg);
+        url(../images/hero/hero2x768.jpg);
     }
   }
+  .orders-header {
+    max-width: 496px;
+    margin: 0 auto 36px;
+  }
+
   .concept-list {
     display: flex;
     row-gap: 72px;
@@ -787,6 +810,9 @@ body .footer-desc {
     gap: 24px;
     justify-content: flex-start;
     flex-direction: row;
+  }
+  .subscribe-input {
+    width: 264px;
   }
 
   .footer .container {
@@ -829,7 +855,7 @@ body .footer-desc {
   }
 
   .contacts-us .top-menu-item .link {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -842,7 +868,7 @@ body .footer-desc {
     padding: 120px 0;
   }
   .orders {
-    background: linear-gradient(
+    background-image: linear-gradient(
         to bottom,
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -853,7 +879,7 @@ body .footer-desc {
   }
   @media (min-resolution: 192dpi) {
     .orders {
-      background: linear-gradient(
+      background-image: linear-gradient(
           to bottom,
           rgba(46, 47, 66, 0.7),
           rgba(46, 47, 66, 0.7)
@@ -868,9 +894,12 @@ body .footer-desc {
 
   .team-list {
     flex-wrap: nowrap;
-    gap: 0;
+    gap: 24px;
   }
 
+  .team-item {
+    width: calc((100% - 72px) / 4);
+  }
   .concept-item {
     width: calc((100% - 72px) / 4);
   }
@@ -914,7 +943,7 @@ body .footer-desc {
     align-items: baseline;
     flex-wrap: nowrap;
     justify-content: left;
-    padding-left: 0;
+    padding-left: 15px;
   }
   .subscribe-form {
     gap: 24px;
@@ -932,9 +961,5 @@ body .footer-desc {
     text-align: left;
   }
   .subscribe-button {
-  }
-  .team-item {
-    margin-right: 24px;
-    width: calc((100% - 72px) / 4);
   }
 }
